@@ -1,11 +1,10 @@
-class Problem4{
-  def length(list: List[Any]): Int = list.size
-}
+package solutions
 
-object Problem4{
-  def main(args: Array[String]): Unit ={
-    val problem4 = new Problem4
-    println("Length of the list is : " + problem4.length(List(1,2,3,4,5)))
+class Problem4{
+
+  def length[A](list: List[A]): Int = list match{
+    case Nil => 0
+    case head :: Nil => 1
+    case head :: tail => 1 + length(tail)
   }
 }
-
