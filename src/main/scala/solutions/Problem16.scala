@@ -1,6 +1,6 @@
 package solutions
 
-class Problem16{
+object Problem16{
   def dropNthElem[A](index: Int, list: List[A]): List[A] = (index, list) match{
     case (index, _) if index < 0=> throw new ArrayIndexOutOfBoundsException
     case (index, Nil) => Nil

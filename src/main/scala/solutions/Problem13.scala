@@ -1,6 +1,6 @@
 package solutions
 
-class Problem13{
+object Problem13{
   def encodeDirect(list: List[Any]): List[(Int, Any)] = {
     if(list.isEmpty) Nil
     else{

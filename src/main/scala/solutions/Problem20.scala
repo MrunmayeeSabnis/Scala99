@@ -1,6 +1,6 @@
 package solutions
 
-class Problem20{
+object Problem20{
 
   def removeAt[A](index: Int, list: List[A]): List[A] = (index, list) match{
     case (_ , Nil) => Nil

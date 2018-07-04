@@ -1,6 +1,6 @@
 package solutions
 
-class Problem18{
+object Problem18{
   def slice[A](fromIndex: Int, toIndex: Int, list: List[A]): List[Any] = (fromIndex, toIndex, list) match{
     case (_ ,_, Nil) => Nil
     case (startIndex, stopIndex, _) if(startIndex < 0 || stopIndex < 0) => throw new ArrayIndexOutOfBoundsException

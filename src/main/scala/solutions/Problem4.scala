@@ -1,6 +1,6 @@
 package solutions
 
-class Problem4{
+object Problem4{
 
   def length[A](list: List[A]): Int = list match{
     case Nil => 0

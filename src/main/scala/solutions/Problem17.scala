@@ -1,6 +1,6 @@
 package solutions
 
-class Problem17{
+object Problem17{
 
   def split[A](index: Int, list: List[A]): (List[A], List[A]) = (index, list) match{
     case (index, _) if index < 0 => throw new ArrayIndexOutOfBoundsException
