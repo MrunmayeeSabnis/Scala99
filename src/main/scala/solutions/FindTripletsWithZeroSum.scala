@@ -14,9 +14,9 @@ object FindTripletsWithZeroSum {
         getComb(head :: head1 :: tail.tail, permList, acc :+ triplet1) ++ getComb(head +: tail, permList, acc :+ triplet2)
       } else if(tail.length == 1){
         val trip = List(head, head1, tail.head)
-        getComb(permList.drop(1), permList.drop(1), acc :+ trip)
-      }else {
-        getComb(permList.drop(1), permList.drop(1), acc)
+        getComb(permList.tail, permList.tail, acc :+ trip)
+      } else {
+        getComb(permList.tail, permList.tail, acc)
       }
     }
   }
