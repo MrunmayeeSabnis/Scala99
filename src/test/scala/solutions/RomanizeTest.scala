@@ -6,7 +6,7 @@ class RomanizeTest extends FunSpec with Matchers {
 
   describe("Romanize"){
 
-    it("romanize for"){
+    it("romanize from numbers"){
       Romanize.toRoman(1) should be("I")
       Romanize.toRoman(4) should be("IV")
       Romanize.toRoman(5) should be("V")
@@ -33,6 +33,35 @@ class RomanizeTest extends FunSpec with Matchers {
       Romanize.toRoman(2006) should be("MMVI")
       Romanize.toRoman(3459) should be("MMMCDLIX")
       Romanize.toRoman(10000) should be("MMMMMMMMMM")
+    }
+
+    it("romanize to numbers"){
+      Romanize.fromRoman("I") should be(1)
+      Romanize.fromRoman("IV") should be(4)
+      Romanize.fromRoman("V") should be (5)
+      Romanize.fromRoman("VI") should be (6)
+      Romanize.fromRoman("IX") should be (9)
+      Romanize.fromRoman("X") should be (10)
+      Romanize.fromRoman("XIV") should be (14)
+      Romanize.fromRoman("XXVI") should be (26)
+      Romanize.fromRoman("XL") should be (40)
+      Romanize.fromRoman("XLVII") should be (47)
+      Romanize.fromRoman("L") should be (50)
+      Romanize.fromRoman("LIX") should be (59)
+      Romanize.fromRoman("LXVI") should be (66)
+      Romanize.fromRoman("XC") should be (90)
+      Romanize.fromRoman("C") should be (100)
+      Romanize.fromRoman("CCLXX") should be (270)
+      Romanize.fromRoman("CD") should be (400)
+      Romanize.fromRoman("CDLVIII") should be (458)
+      Romanize.fromRoman("D") should be (500)
+      Romanize.fromRoman("DCLVII") should be (657)
+      Romanize.fromRoman("CM") should be (900)
+      Romanize.fromRoman("CMLXXVII") should be (977)
+      Romanize.fromRoman("M") should be (1000)
+      Romanize.fromRoman("MMVI") should be (2006)
+      Romanize.fromRoman("MMMCDLIX") should be (3459)
+      Romanize.fromRoman("MMMMMMMMMM") should be (10000)
     }
 
   }
